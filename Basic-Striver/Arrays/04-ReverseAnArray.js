@@ -15,5 +15,23 @@ function reverseOfArray(arr){
   }
   return arr;
 }
+//const arr = [1,2,3,4,5];
+//console.log(reverseOfArray(arr));
+
+
+function bruteReverse(arr){
+  let n = arr.length;
+  const ans = new Array(n);
+  for(let i=n-1;i>=0;i--){
+    ans[n-i-1] = arr[i];
+  }
+
+  for(let i=0;i<n;i++){
+    arr[i] = ans[i];
+  }
+
+  return arr;
+}
+
 const arr = [1,2,3,4,5];
-console.log(reverseOfArray(arr));
+console.log(bruteReverse(arr));
